@@ -1,0 +1,29 @@
+{
+	"kind": "collectionType",
+	"collectionName": "categories",
+	"info": {
+		"singularName": "category",
+		"pluralName": "categories",
+		"displayName": "Page category"
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"attributes": {
+		"slug": {
+			"type": "uid",
+			"targetField": "title",
+			"required": true
+		},
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"pages": {
+			"type": "relation",
+			"relation": "oneToMany",
+			"target": "api::page.page",
+			"mappedBy": "category"
+		}
+	}
+}

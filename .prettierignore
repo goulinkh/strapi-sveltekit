@@ -1,0 +1,13 @@
+package-lock.json
+node_modules
+cms/.cache
+cms/.tmp
+cms/.strapi
+cms/.strapi-updater.json
+cms/types/generated
+cms/dist
+cms/build
+web/.svelte-kit
+web/build
+playwright-report
+test-results

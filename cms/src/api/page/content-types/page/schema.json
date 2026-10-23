@@ -1,0 +1,37 @@
+{
+	"kind": "collectionType",
+	"collectionName": "pages",
+	"info": {
+		"singularName": "page",
+		"pluralName": "pages",
+		"displayName": "Page"
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"attributes": {
+		"slug": {
+			"type": "uid",
+			"targetField": "title",
+			"required": true
+		},
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": true
+		},
+		"category": {
+			"type": "relation",
+			"relation": "manyToOne",
+			"target": "api::category.category",
+			"inversedBy": "pages"
+		},
+		"body": {
+			"type": "text",
+			"required": true
+		}
+	}
+}

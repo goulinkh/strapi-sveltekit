@@ -1,0 +1,35 @@
+{
+	"kind": "collectionType",
+	"collectionName": "posts",
+	"info": {
+		"singularName": "post",
+		"pluralName": "posts",
+		"displayName": "Post"
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"attributes": {
+		"slug": {
+			"type": "uid",
+			"targetField": "title",
+			"required": true
+		},
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": true
+		},
+		"body": {
+			"type": "text",
+			"required": true
+		},
+		"category": {
+			"type": "string",
+			"default": "Ubuntu"
+		}
+	}
+}
